@@ -1,37 +1,38 @@
-# Titanic Survival Prediction 🚢
+# 🌸 IRIS FLOWER CLASSIFICATION
 
-### 📘 Overview
-This project is part of my **CODSOFT Data Science Internship (Task 1)**.
-The goal is to predict passenger survival on the Titanic using machine learning.
+This project is part of my **CodSoft Data Science Internship (Task 2)**.  
+It focuses on predicting the species of Iris flowers based on their petal and sepal measurements.
 
-### 🧩 Dataset
-The dataset contains information about Titanic passengers:
-- PassengerId  
-- Name  
-- Age  
-- Sex  
-- Ticket  
-- Fare  
-- Cabin  
-- Embarked  
-- Survived (Target)
+---
 
-Source: [Kaggle Titanic Dataset](https://www.kaggle.com/datasets/yasserh/titanic-dataset)
+## 📘 PROJECT OVERVIEW
 
-### 🧠 Steps Involved
-1. Data Cleaning  
-2. Encoding categorical variables  
-3. Model Training (Random Forest)  
-4. Evaluation and Visualization
+The **Iris Flower Classification** project is a classic machine learning problem.  
+It uses a simple dataset to classify flowers into one of three species:
+- Setosa 🌼
+- Versicolor 🌺
+- Virginica 🌸
 
-### 📊 Tools Used
-- Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn  
-- Jupyter Notebook
+Using features:
+- Sepal Length  
+- Sepal Width  
+- Petal Length  
+- Petal Width  
 
-### ✅ Results
-Model accuracy: **~80–85%**  
-Important features: **Sex, Age, Fare, Pclass**
+---
 
-### ✍️ Author
-**Sai Charanya Koneti**  
-CODSOFT Data Science Internship (2025)
+## ⚙️ TECHNOLOGIES USED
+- Python  
+- Pandas  
+- NumPy  
+- Scikit-learn  
+- Streamlit  
+
+---
+
+## 🚀 HOW TO RUN THE PROJECT
+
+### ▶️ Step 1: Install Required Libraries
+Open your terminal and run:
+```bash
+pip install pandas numpy scikit-learn streamlit
