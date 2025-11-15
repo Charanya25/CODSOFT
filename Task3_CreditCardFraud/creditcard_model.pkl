@@ -1,0 +1,35 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from imblearn.under_sampling import RandomUnderSampler
+import pickle
+
+# 🔹 Load dataset
+df = pd.read_csv("creditcard.csv")
+print("Dataset loaded successfully!")
+
+# 🔹 Separate features and target
+X = df.drop("Class", axis=1)
+y = df["Class"]
+
+# 🔹 Fix class imbalance
+rus = RandomUnderSampler(random_state=42)
+X_resampled, y_resampled = rus.fit_resample(X, y)
+
+print("Before Sampling:", y.value_counts())
+print("After Sampling:", y_resampled.value_counts())
+
+# 🔹 Train-test split
+x_train, x_test, y_train, y_test = train_test_split(
+    X_resampled, y_resampled, test_size=0.2, random_state=42
+)
+
+# 🔹 Train Random Forest model
+model = RandomForestClassifier(n_estimators=100, random_state=42)
+model.fit(x_train, y_train)
+
+# 🔹 Save model as creditcard_model.pkl
+with open("creditcard_model.pkl", "wb") as file:
+    pickle.dump(model, file)
+
+print("✔ creditcard_model.pkl created successfully!")
